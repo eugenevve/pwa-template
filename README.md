@@ -39,7 +39,7 @@ The `service-worker.js` file in the `public` folder is created automatically by 
 
 ### PWA work
 
-As a result of the latest updates from Google, PWA functions correctly only when using hosting (working locally is not guaranteed).
+As a result of the latest updates from Google, PWA works correctly only when using hosting and a configured SSL certificate on the domain name.
 
 <br />
 
