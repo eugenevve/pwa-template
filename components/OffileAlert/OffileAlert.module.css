@@ -1,0 +1,9 @@
+.alert {
+  position: absolute;
+  margin-top: 3em;
+  padding: 1em 3em;
+  color: white;
+  background: #121212;
+  border-radius: 10px;
+  transition: 1s;
+}
