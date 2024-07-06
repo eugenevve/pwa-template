@@ -1,6 +1,6 @@
 # PWA-ON-NEXTJS-TEMPLATE
 
-This project is a template for setting up a PWA (Progressive Web App) site mode. It includes a custom install button and support for all types of alert responses for various types of browsers. And also display a notification about disconnecting the Internet connection.
+This project is a template for setting up a PWA (Progressive Web App) site mode. It includes a custom install button and support for all types of alert responses for various types of browsers. And also display a notification about disconnecting the Internet connection. [Template icon Figma](https://www.figma.com/community/file/1380577671249157222/website-icon-adaptation)
 
 <br />
 
