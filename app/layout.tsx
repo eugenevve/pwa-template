@@ -23,7 +23,7 @@ export default function RootLayout({
 
         {/* Website icons */}
         <link rel="icon" href="/favicons/favicon.ico" />
-        <link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/svg" href="/favicons/favicon.svg" />
         <link rel="apple-touch-icon" href="/favicons/favicon-180-180.png" />
 
         {/* Share data */}
