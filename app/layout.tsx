@@ -1,5 +1,5 @@
 import "./globals.css";
-import SplashScreenIos from "./SplashScreenIos";
+import SplashScreenIos from "./splashScreenIos";
 
 export default function RootLayout({
   children,
