@@ -1,5 +1,5 @@
 import "./globals.css";
-import SplashScreenIos from "./splashScreenIos";
+import SplashScreen from "@/components/SplashScreen";
 
 export default function RootLayout({
   children,
@@ -36,7 +36,7 @@ export default function RootLayout({
         <meta property="og:image" content="/favicons/favicon-512-512.png" />
       </head>
       <body>
-        <SplashScreenIos />
+        <SplashScreen />
         {children}
       </body>
     </html>
