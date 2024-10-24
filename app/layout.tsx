@@ -10,17 +10,15 @@ export default function RootLayout({
     <html lang="en">
       <title>PWA-NTX</title>
       <head>
-        {/* Associated files and metadata */}
+        {/* Website styling and pwa */}
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="PWA on NextJs template browser search" />
-
-        {/* Styling for WebSite */}
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
 
         {/* Website icons */}
         <link rel="icon" href="/favicons/favicon.ico" />
