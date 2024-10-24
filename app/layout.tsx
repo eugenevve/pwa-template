@@ -28,11 +28,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicons/favicon-180-180.png" />
 
         {/* Share data */}
+        <meta property="og:url" content="/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="PWA-NX" />
         <meta property="og:title" content="PWA on NextJs template link description" />
         <meta property="og:description" content="PWA on NextJs template additional description" />
-        <meta property="og:url" content="/" />
         <meta property="og:image" content="/favicons/favicon-512-512.png" />
       </head>
       <body>
