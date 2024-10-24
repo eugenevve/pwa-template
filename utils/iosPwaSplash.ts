@@ -1,20 +1,19 @@
-function iosPWASplash(icon: string, color: string): void {
-  if (typeof icon !== "string" || icon.length === 0) {
+export default function iosPWASplash(iconURL: string, backgroundColor: string): void {
+  if (typeof iconURL !== "string" || iconURL.length === 0) {
     throw new Error("Invalid icon URL provided");
   }
 
-  const deviceWidth = screen.width;
-  const deviceHeight = screen.height;
-
+  const screenWidth = screen.width;
+  const screenHeight = screen.height;
   const pixelRatio = window.devicePixelRatio || 1;
 
-  const canvas = document.createElement("canvas");
-  const canvas2 = document.createElement("canvas");
+  const portraitCanvas = document.createElement("canvas");
+  const landscapeCanvas = document.createElement("canvas");
 
-  const ctx = canvas.getContext("2d");
-  const ctx2 = canvas2.getContext("2d");
+  const portraitContext = portraitCanvas.getContext("2d");
+  const landscapeContext = landscapeCanvas.getContext("2d");
 
-  if (!ctx || !ctx2) {
+  if (!portraitContext || !landscapeContext) {
     throw new Error("Failed to get canvas context");
   }
 
@@ -24,44 +23,43 @@ function iosPWASplash(icon: string, color: string): void {
     throw new Error("Failed to load icon image");
   };
 
-  iconImage.src = icon;
+  iconImage.src = iconURL;
 
   iconImage.onload = function () {
-    const iconSizew = iconImage.width / (3 / pixelRatio);
-    const iconSizeh = iconImage.height / (3 / pixelRatio);
+    const iconSizeWidth = iconImage.width / (3 / pixelRatio);
+    const iconSizeHeight = iconImage.height / (3 / pixelRatio);
 
-    canvas.width = deviceWidth * pixelRatio;
-    canvas2.height = canvas.width;
-    canvas.height = deviceHeight * pixelRatio;
-    canvas2.width = canvas.height;
+    portraitCanvas.width = screenWidth * pixelRatio;
+    landscapeCanvas.height = portraitCanvas.width;
+    portraitCanvas.height = screenHeight * pixelRatio;
+    landscapeCanvas.width = portraitCanvas.height;
 
-    ctx.fillStyle = color;
-    ctx2.fillStyle = color;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
+    portraitContext.fillStyle = backgroundColor;
+    landscapeContext.fillStyle = backgroundColor;
+    portraitContext.fillRect(0, 0, portraitCanvas.width, portraitCanvas.height);
+    landscapeContext.fillRect(0, 0, landscapeCanvas.width, landscapeCanvas.height);
 
-    const x = (canvas.width - iconSizew) / 2;
-    const y = (canvas.height - iconSizeh) / 2;
-    const x2 = (canvas2.width - iconSizew) / 2;
-    const y2 = (canvas2.height - iconSizeh) / 2;
+    const portraitIconX = (portraitCanvas.width - iconSizeWidth) / 2;
+    const portraitIconY = (portraitCanvas.height - iconSizeHeight) / 2;
+    const landscapeIconX = (landscapeCanvas.width - iconSizeWidth) / 2;
+    const landscapeIconY = (landscapeCanvas.height - iconSizeHeight) / 2;
 
-    ctx.drawImage(iconImage, x, y, iconSizew, iconSizeh);
-    ctx2.drawImage(iconImage, x2, y2, iconSizew, iconSizeh);
-    const imageDataURL = canvas.toDataURL("image/png");
-    const imageDataURL2 = canvas2.toDataURL("image/png");
+    portraitContext.drawImage(iconImage, portraitIconX, portraitIconY, iconSizeWidth, iconSizeHeight);
+    landscapeContext.drawImage(iconImage, landscapeIconX, landscapeIconY, iconSizeWidth, iconSizeHeight);
 
-    const appleTouchStartupImageLink = document.createElement("link");
-    appleTouchStartupImageLink.setAttribute("rel", "apple-touch-startup-image");
-    appleTouchStartupImageLink.setAttribute("media", "screen and (orientation: portrait)");
-    appleTouchStartupImageLink.setAttribute("href", imageDataURL);
-    document.head.appendChild(appleTouchStartupImageLink);
+    const portraitImageDataURL = portraitCanvas.toDataURL("image/png");
+    const landscapeImageDataURL = landscapeCanvas.toDataURL("image/png");
 
-    const appleTouchStartupImageLink2 = document.createElement("link");
-    appleTouchStartupImageLink2.setAttribute("rel", "apple-touch-startup-image");
-    appleTouchStartupImageLink2.setAttribute("media", "screen and (orientation: landscape)");
-    appleTouchStartupImageLink2.setAttribute("href", imageDataURL2);
-    document.head.appendChild(appleTouchStartupImageLink2);
+    const portraitSplashLink = document.createElement("link");
+    portraitSplashLink.setAttribute("rel", "apple-touch-startup-image");
+    portraitSplashLink.setAttribute("media", "screen and (orientation: portrait)");
+    portraitSplashLink.setAttribute("href", portraitImageDataURL);
+    document.head.appendChild(portraitSplashLink);
+
+    const landscapeSplashLink = document.createElement("link");
+    landscapeSplashLink.setAttribute("rel", "apple-touch-startup-image");
+    landscapeSplashLink.setAttribute("media", "screen and (orientation: landscape)");
+    landscapeSplashLink.setAttribute("href", landscapeImageDataURL);
+    document.head.appendChild(landscapeSplashLink);
   };
 }
-
-export default iosPWASplash;
