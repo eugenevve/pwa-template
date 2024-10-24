@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/styles/globals.css";
 import SplashScreen from "@/components/SplashScreen";
 
 export default function RootLayout({

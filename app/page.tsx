@@ -1,6 +1,6 @@
 "use client";
 import { useOnlineStatus } from "@/hooks/useOnline";
-import Offline from "./offline";
+import OfflineAlert from "@/components/OffileAlert";
 import { InstallPwaButton } from "@/components/InstallPwaButton";
 import { pwaCheck } from "@/utils/pwaCheck";
 import { usePwaInstallPrompt } from "@/hooks/usePwaInstallPrompt";
@@ -27,7 +27,7 @@ export default function Page() {
   ) : (
     <>
       {installing}
-      <Offline />
+      <OfflineAlert />
     </>
   );
 }
