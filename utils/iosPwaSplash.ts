@@ -1,5 +1,5 @@
 export default function iosPWASplash(iconURL: string, backgroundColor: string): void {
-  if (typeof iconURL !== "string" || iconURL.length === 0) {
+  if (iconURL.length === 0) {
     throw new Error("Invalid icon URL provided");
   }
 
