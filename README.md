@@ -1,15 +1,21 @@
 # PWA-ON-NEXTJS-TEMPLATE
 
-This project is a template for setting up a PWA (Progressive Web App) site mode. It includes a custom install button and support for all types of alert responses for various types of browsers. And also display a notification about disconnecting the Internet connection. [Template icon Figma](https://www.figma.com/community/file/1380577671249157222/website-icon-adaptation)
+This project is a template with a configured PWA (Progressive Web App) mode of the site. It includes a customizable installation button support for various notifications for all types of browsers. It also displays a notification about disconnecting the Internet connection.
+
+Optimized favicon of the site, using a minimum number of files. To create such icons, you can use [Figma templates](https://www.figma.com/community/file/1380577671249157222/website-icon-adaptation).
+
+For Apple devices, a splash screen has been created, which in turn is optimized for all screen sizes. And this splash is created automatically (you will not need to constantly update them manually).
 
 <br />
 
 ### Features
 
-- **PWA support**: Includes all the necessary settings for the PWA site to work.
-- **Custom install button**: User can easily install the application on their device.
-- **Custom install button - alerts**: Support for alerts for various types of browsers.
-- **Offline alert**: Support offline notification about internet outage.
+- **PWA support**: Includes all the necessary settings for the site to work in PWA mode
+- **Custom install button**: The user can easily install the application on their device;
+- **Custom install button - notifications**: Supports notifications for different types of browsers;
+- **Offline notification**: Supports offline notifications about internet disconnection;
+- **Optimized site favicon**: Using a minimum number of icons for all browsers and devices;
+- **Optimized splash screens for Apple**: Optimization and automation of splash screens that are created automatically.
 
 <br />
 
@@ -29,7 +35,7 @@ Customize the code in the `next.config.js` file to suit your projects.
 
 #### 3. Creating manifest.json
 
-Use `manifest.json` in the `public` folder with the specified settings.
+Use `manifest.webmanifest` in the `public` folder with the specified settings.
 
 #### 4. Service worker
 
@@ -72,8 +78,6 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 <br />
 
