@@ -14,6 +14,7 @@ For Apple devices, a splash screen has been created, which in turn is optimized 
 - **Custom install button**: The user can easily install the application on their device;
 - **Custom install button - notifications**: Supports notifications for different types of browsers;
 - **Offline notification**: Supports offline notifications about internet disconnection;
+- **PWA screenshots**: PWA installation screenshots for Android devices;
 - **Optimized site favicon**: Using a minimum number of icons for all browsers and devices;
 - **Optimized splash screens for Apple**: Optimization and automation of splash screens that are created automatically.
 
