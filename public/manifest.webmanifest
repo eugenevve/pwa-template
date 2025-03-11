@@ -1,6 +1,6 @@
 {
   "name": "PWA-Template",
-  "description": "PWA on template",
+  "description": "PWA template description",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
