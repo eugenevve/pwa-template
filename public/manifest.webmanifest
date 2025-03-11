@@ -1,6 +1,6 @@
 {
-  "name": "PWA-NTX",
-  "description": "PWA on NextJs template",
+  "name": "PWA-Template",
+  "description": "PWA on template",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
@@ -16,26 +16,6 @@
       "src": "/favicons/favicon-512-512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshots/screenshot-1.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "label": "Screenshot-1-label"
-    },
-    {
-      "src": "/screenshots/screenshot-2.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "label": "Screenshot-2-label"
-    },
-    {
-      "src": "/screenshots/screenshot-3.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "label": "Screenshot-3-label"
     }
   ]
 }

@@ -1,0 +1,48 @@
+.container {
+  background: #171717;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  font-size: 18px;
+  padding: 15px 35px;
+  border: 0;
+  border-radius: 15px;
+  color: white;
+  background: #252525;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+@media (hover: hover) {
+  button:hover {
+    background: #353535;
+  }
+
+  button:active {
+    background: #505050;
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    background: #454545;
+  }
+}
