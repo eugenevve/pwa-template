@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 
+import { Head } from "./components/Head";
 import { SplashScreen } from "./components/SplashScreen";
 import { useOnlineStatus } from "./hooks/useOnline";
 import { Home } from "./pages/Home";
@@ -16,6 +17,7 @@ export const App: FC = () => {
 
   return (
     <>
+      <Head />
       <SplashScreen />
       <BrowserRouter>
         <Routes>
