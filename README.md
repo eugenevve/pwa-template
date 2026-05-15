@@ -1,99 +1,175 @@
-# PWA-TEMPLATE
+# PWA Template (Vite)
 
-This project is a template with a customized PWA (Progressive Web App) mode of the site. It includes a customizable install button, support for various notifications for all types of browsers. It also displays a notification about the disconnection of the Internet connection.
+![Vite](https://img.shields.io/badge/Vite-PWA_Template-646CFF?logo=vite&logoColor=white)
+![PWA Ready](https://img.shields.io/badge/PWA-Ready-5A0FC8)
+![Minimal](https://img.shields.io/badge/Setup-Minimal-00C853)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Optimized favicon of the site, using a minimum number of files. To create such icons, you can use [Figma templates](https://www.figma.com/community/file/1380577671249157222/website-icon-adaptation).
+A minimal and production-oriented **Progressive Web App (PWA) template** built with **Vite**.
 
-For Apple devices, a splash screen has been created, which in turn is optimized for all screen sizes. And this splash screen is created automatically (you will not need to constantly update them manually).
+This repository is designed to provide a clean, working example of how to correctly set up a PWA without unnecessary complexity, unclear documentation, or hidden magic.
 
-<br />
+---
 
-### Features
+## ✨ Purpose
 
-- **PWA Support**: Includes all the necessary settings for the site to work in PWA mode
-- **Custom Install Button**: The user can easily install the application on his device;
-- **Custom Install Button - Notifications**: Supports notifications for different types of browsers;
-- **Offline Notifications**: Supports offline notifications about internet disconnection;
-- **Optimized Site Icon**: Using a minimum number of icons for all browsers and devices;
-- **Optimized Splash Screensavers for Apple**: Optimization and automation of splash screens that are created automatically.
+PWA setup in most tutorials is either overcomplicated or incomplete.
 
-<br />
+This template focuses on:
 
-### Installation
+- Clear and minimal configuration
+- Working PWA fundamentals out of the box
+- Easy customization of icons, manifest, and themes
+- No external PWA libraries or abstractions
 
-#### 1. Create manifest.webmanifest
+---
 
-Use `manifest.webmanifest` in the `public` folder with the specified settings.
+## 🚀 Features
 
-#### 2. Project favicon
+- ⚡ Built with **Vite**
+- 📱 Fully configured **PWA manifest**
+- 🌙 Light / dark theme support for icons
+- 🍏 iOS-friendly icons and splash screen setup
+- 🧩 Optimized favicon system (minimal file set)
+- 🔌 Offline support with custom offline page
+- 🎯 Clean structure — easy to extend or modify
+- 🪶 No external PWA libraries or service worker frameworks
 
-Create favicons that are specified in `manifest.webmanifest` and `index.html`
+---
 
-<br />
+## 📦 Installation
 
-### PWA works
+Clone the repository:
 
-As a result of recent updates from Google, PWA works correctly only when using hosting and a configured SSL certificate on the domain name.
-
-<br />
-
-### Contribution
-
-If you have suggestions or found errors, please create an issue or open a pull request.
-
-<br /><br /><br />
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```bash
+git clone https://github.com/eugenevve/pwa-template.git
+cd pwa-template
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+npm install
 ```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📁 Project Structure
+
+```
+public/
+  ├── favicons
+  └── manifest.webmanifest
+
+src/
+  ├── components
+  ├── hooks
+  ├── pages
+  ├── ui
+  ├── utils
+  ├── App.tsx
+  ├── main.css
+  └── main.tsx
+```
+
+---
+
+## 📱 PWA Setup
+
+This template includes a ready-to-use:
+
+### Manifest
+
+Configured via `manifest.webmanifest` in the `public` folder.
+
+### Offline Support
+
+A simple custom offline page is displayed when the user loses connection.
+
+No service worker frameworks are used — everything is intentionally minimal.
+
+---
+
+## 🍏 Favicon & iOS Support
+
+The template uses an optimized favicon strategy with minimal assets:
+
+- `favicon-512-512.png` → light theme icon
+- `favicon-180-180.png` → transparent iOS icon (iOS 18+ adaptive background)
+- `favicon-32-32.png` → dark theme icon
+
+### Theme support
+
+- Light / dark adaptive icons
+- Transparent iOS icon for system-aware backgrounds (iOS 18+)
+
+---
+
+## 🎨 Favicon Design Guide
+
+Favicon variations in this project are based on the following design system:
+
+👉 [https://www.figma.com/community/file/1380577671249157222/website-icon-generation?q_id=3def6b37-f218-4f34-b254-2b9d6d2ff335](https://www.figma.com/community/file/1380577671249157222/website-icon-generation?q_id=3def6b37-f218-4f34-b254-2b9d6d2ff335)
+
+It demonstrates how to correctly adapt a single icon into multiple formats for:
+
+- light theme
+- dark theme
+- transparent iOS adaptive icons
+
+---
+
+## 🍏 Splash Screens (iOS)
+
+Splash screens are generated using an automated canvas-based generator.
+
+For advanced customization or manual generation, you can use:
+
+[https://progressier.com/pwa-icons-and-ios-splash-screen-generator](https://progressier.com/pwa-icons-and-ios-splash-screen-generator)
+
+or inspect implementation inside this template.
+
+---
+
+## 🧠 Why this template exists
+
+Most PWA guides online:
+
+- are outdated
+- use unnecessary libraries
+- hide important configuration details
+- don’t explain favicon / iOS behavior properly
+
+This template solves that by providing a **working, minimal, and understandable baseline**.
+
+---
+
+## 📌 Notes
+
+- PWA features work only in production builds
+- Requires HTTPS in production environments
+- Best tested on real devices (especially iOS Safari)
+
+---
+
+## 🤝 Contribution
+
+If you find issues or improvements, feel free to open an issue or pull request.
