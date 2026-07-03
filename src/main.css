@@ -1,6 +1,30 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #e7e7e7;
+  --blue: #0080ff;
+}
+
 html,
 body {
-  background: #000000;
+  fill: var(--black);
+  stroke: var(--black);
+  color: var(--black);
+  background: var(--white);
   -webkit-tap-highlight-color: transparent;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gray: #171717;
+  }
+
+  html,
+  body {
+    fill: var(--white);
+    stroke: var(--white);
+    color: var(--white);
+    background: var(--black);
+  }
 }

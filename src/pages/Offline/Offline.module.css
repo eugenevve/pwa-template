@@ -1,12 +1,9 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 20px;
 }
 
 .title {
-  color: #ffffff;
   font-size: 18px;
 }

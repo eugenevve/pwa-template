@@ -1,17 +1,13 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 20px;
 }
 
 .number {
-  color: #ffffff;
   font-size: 28px;
 }
 
 .title {
-  color: #ffffff;
   font-size: 18px;
 }

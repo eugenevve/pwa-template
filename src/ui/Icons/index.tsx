@@ -1,6 +1,6 @@
 export const ShareIosIcon = ({ ...props }) => {
   return (
-    <svg width="20" height="16" viewBox="0 0 16 16" stroke="#ffffff" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg width="20" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
         fill="none"
         d="M15 8.875V13.25C15 14.2165 14.2165 15 13.25 15H2.75C1.7835 15 1 14.2165 1 13.25L1 8.875M11.5 4.5L8 1M8 1L4.5 4.5M8 1L8 11.5"
@@ -14,7 +14,7 @@ export const ShareIosIcon = ({ ...props }) => {
 
 export const ShareAndroidIcon = ({ ...props }) => {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
         stroke="none"
         d="M10 2C10 3.10457 9.10457 4 8 4C6.89543 4 6 3.10457 6 2C6 0.89543 6.89543 0 8 0C9.10457 0 10 0.89543 10 2Z"

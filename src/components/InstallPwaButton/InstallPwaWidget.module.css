@@ -1,5 +1,5 @@
 .container {
-  background: #171717;
+  background: var(--gray);
   padding: 10px 20px;
   border-radius: 10px;
   display: flex;
@@ -9,40 +9,38 @@
 }
 
 .title {
-  color: #ffffff;
   font-size: 20px;
   text-align: center;
 }
 
 .text {
-  color: #ffffff;
   font-size: 16px;
   text-align: center;
 }
 
 button {
-  font-size: 18px;
+  color: var(--white);
+  background: var(--blue);
   padding: 15px 35px;
-  border: 0;
   border-radius: 15px;
-  color: #ffffff;
-  background: #252525;
+  border: 0;
+  font-size: 18px;
   cursor: pointer;
   transition: 300ms;
 }
 
 @media (hover: hover) {
   button:hover {
-    background: #353535;
+    opacity: 0.8;
   }
 
   button:active {
-    background: #505050;
+    opacity: 0.6;
   }
 }
 
 @media (hover: none) {
   button:active {
-    background: #454545;
+    opacity: 0.8;
   }
 }
