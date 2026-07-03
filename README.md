@@ -1,4 +1,4 @@
-# PWA Template (Vite)
+# PWA-Template
 
 ![Vite](https://img.shields.io/badge/Vite-PWA_Template-646CFF?logo=vite&logoColor=white)
 ![PWA Ready](https://img.shields.io/badge/PWA-Ready-5A0FC8)
